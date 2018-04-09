@@ -10,13 +10,11 @@ import (
 
 	"gopkg.in/mgo.v2/bson"
 
-	. "github.com/dmallory/books/config"
 	. "github.com/dmallory/books/dao"
 	. "github.com/dmallory/books/models"
 	"github.com/gorilla/mux"
 )
 
-var config = Config{}
 var books = BookDAO{}
 
 // Get all books
@@ -244,9 +242,6 @@ func Books() BookDAO {
 
 // App setup
 func init() {
-
-	// Load config
-	config.Read()
 
 	// Set up and connect database
 	books = Books()

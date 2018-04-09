@@ -1,0 +1,3 @@
+#!/bin/sh
+mongod --dbpath=/var/lib/mongodb &
+/go/bin/books
