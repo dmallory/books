@@ -236,8 +236,8 @@ func returnJson(writer http.ResponseWriter, code int, data interface{}) {
 // Creation of books database, for server or testing
 func Books() BookDAO {
 	var books BookDAO
-	books.Server = config.Server
-	books.Database = config.Database
+	books.Server = "localhost"
+	books.Database = "books"
 	books.Connect()
 	return books
 }

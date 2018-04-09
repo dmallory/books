@@ -1,0 +1,18 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: books
+  labels:
+    app: books
+spec:
+  template:
+    metadata:
+      labels:
+        app: books
+        tier: web
+    spec:
+      containers:
+      - name: books
+        image: github.com/dmallory/books:1.0
+        ports:
+        - containerPort: 3000
